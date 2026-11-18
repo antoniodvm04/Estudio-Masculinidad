@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>¿Quién te enseñó a ser hombre?</title>
+<style>
+:root{--bg:#f1f4f3;--surface:#ffffff;--ink:#10282c;--muted:#55676b;--line:#d3dcda;--accent:#0b6e6e;--accent-ink:#ffffff;--soft:#dcebe8;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1a1c;--surface:#16262a;--ink:#e8efee;--muted:#9fb1b4;--line:#2a3f43;--accent:#4fc3b8;--accent-ink:#06211f;--soft:#1d3a3c;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f1a1c;--surface:#16262a;--ink:#e8efee;--muted:#9fb1b4;--line:#2a3f43;--accent:#4fc3b8;--accent-ink:#06211f;--soft:#1d3a3c;color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:1rem/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:40rem;margin:0 auto;padding:2.5rem 1.25rem 4rem}
+h1{font-size:clamp(2.2rem,9vw,3.6rem);line-height:1.04;letter-spacing:-.03em;font-weight:800;margin:0 0 1rem}
+h2{font-size:1.25rem;letter-spacing:-.01em;margin:2.5rem 0 .75rem}
+p{margin:0 0 1rem;max-width:62ch}
+.lead{font-size:1.125rem;color:var(--muted)}
+.steps{display:flex;gap:.5rem;list-style:none;padding:0;margin:1.75rem 0 0}
+.steps li{flex:1;border-top:4px solid var(--line);padding-top:.5rem;font-size:.9rem;color:var(--muted);transition:border-color .3s,color .3s}
+.steps li.on{border-color:var(--accent);color:var(--ink);font-weight:600}
+details{border-top:1px solid var(--line)}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;padding:.9rem 0;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:1rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--accent);font-size:1.3rem;line-height:1}
+details[open] summary::after{content:"−"}
+details p{color:var(--muted);margin:0 0 1rem}
+.consent{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.25rem}
+.check{display:flex;gap:.75rem;align-items:flex-start;padding:.6rem 0;cursor:pointer}
+.check input{width:1.4rem;height:1.4rem;margin:.1rem 0 0;flex:none;accent-color:var(--accent)}
+.meter{height:8px;background:var(--soft);border-radius:99px;overflow:hidden;margin:1rem 0 .4rem}
+.meter i{display:block;height:100%;width:0;background:var(--accent);transition:width .35s ease}
+.count{font-size:.9rem;color:var(--muted);margin:0 0 1rem}
+button{font:inherit;font-weight:700;width:100%;padding:.95rem 1.25rem;border:0;border-radius:12px;background:var(--accent);color:var(--accent-ink);cursor:pointer}
+button:disabled{background:var(--line);color:var(--muted);cursor:not-allowed}
+.note{margin:.9rem 0 0;font-size:.95rem;color:var(--muted)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<main>
+  <h1>¿Quién te enseñó a ser hombre?</h1>
+  <p class="lead">Estudio de Educación Social de la Universidad de Granada sobre cómo aprenden los jóvenes qué significa ser hombre. Es anónimo, voluntario y no hay respuestas correctas ni incorrectas.</p>
+  <ol class="steps" aria-label="Pasos">
+    <li class="on" id="s1">Leer</li>
+    <li id="s2">Aceptar</li>
+    <li id="s3">Responder</li>
+  </ol>
+
+  <h2>De qué trata</h2>
+  <p>Queremos entender de dónde viene lo que se espera de un hombre: la familia, los amigos, el deporte, la escuela, las series o las redes sociales. Tu experiencia nos ayuda a pensar cómo educar mejor a las nuevas generaciones.</p>
+
+  <h2>Antes de decidir</h2>
+  <details>
+    <summary>¿Quién puede participar?</summary>
+    <p>Cualquier persona de 18 a 25 años que quiera contar cómo ha vivido estas ideas.</p>
+  </details>
+  <details>
+    <summary>¿Qué datos se recogen?</summary>
+    <p>Solo tus respuestas. No pedimos nombre, correo ni nada que te identifique. Tampoco preguntamos por situaciones de violencia vivida o ejercida.</p>
+  </details>
+  <details>
+    <summary>¿Puedo dejarlo a mitad?</summary>
+    <p>Sí, cuando quieras y sin dar explicaciones. Si cierras el cuestionario sin enviarlo, no se guarda nada.</p>
+  </details>
+  <details>
+    <summary>¿Para qué se usarán mis respuestas?</summary>
+    <p>Solo para un trabajo universitario. Se analizan en conjunto y nunca se muestran de forma individual.</p>
+  </details>
+  <details>
+    <summary>¿Tengo dudas?</summary>
+    <p>Pregúntale a la persona que te ha enviado este enlace antes de empezar.</p>
+  </details>
+
+  <h2>Tu consentimiento</h2>
+  <div class="consent">
+    <label class="check"><input type="checkbox" class="c"><span>Tengo 18 años o más.</span></label>
+    <label class="check"><input type="checkbox" class="c"><span>He leído la información y entiendo para qué se usarán mis respuestas.</span></label>
+    <label class="check"><input type="checkbox" class="c"><span>Participo de forma voluntaria y sé que puedo parar cuando quiera.</span></label>
+    <label class="check"><input type="checkbox" class="c"><span>Acepto que mis respuestas anónimas se usen en este trabajo.</span></label>
+    <div class="meter" aria-hidden="true"><i id="bar"></i></div>
+    <p class="count" id="count" aria-live="polite">0 de 4 confirmadas</p>
+    <button id="go" disabled>Ir al cuestionario</button>
+    <p class="note" id="note" role="status" hidden></p>
+  </div>
+</main>
+<script>
+// Pega aquí el enlace del formulario (Google Forms o el de la universidad).
+var FORM_URL = "https://forms.gle/KrLywxrmftiVZJxF8";
+var boxes = Array.prototype.slice.call(document.querySelectorAll(".c"));
+var bar = document.getElementById("bar"), count = document.getElementById("count");
+var go = document.getElementById("go"), note = document.getElementById("note");
+var s2 = document.getElementById("s2"), s3 = document.getElementById("s3");
+function update(){
+  var n = boxes.filter(function(b){return b.checked}).length;
+  bar.style.width = (n / boxes.length * 100) + "%";
+  count.textContent = n === boxes.length ? "Todo confirmado. Ya puedes empezar." : n + " de " + boxes.length + " confirmadas";
+  go.disabled = n !== boxes.length;
+  s2.className = n > 0 ? "on" : "";
+  s3.className = n === boxes.length ? "on" : "";
+  if (n !== boxes.length) { note.hidden = true; }
+}
+boxes.forEach(function(b){ b.addEventListener("change", update); });
+go.addEventListener("click", function(){
+  if (FORM_URL) { window.open(FORM_URL, "_blank", "noopener"); }
+  else { note.textContent = "El enlace al cuestionario todavía no está añadido."; note.hidden = false; }
+});
+</script>
+</body>
+</html>
